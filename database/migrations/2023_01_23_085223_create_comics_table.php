@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateListingsTable extends Migration
+class CreateComicsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreateListingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('listings', function (Blueprint $table) {
+        Schema::create('comics', function (Blueprint $table) {
             $table->id();
             $table->string('title',200);
-            $table->string('description',250);
-            $table->string('link',250)->nullable();
+            $table->text('description');
+            $table->string('thumb',250)->nullable();
             $table->float('price');
             $table->string('series',150)->nullable();
             $table->date('sale_date');
-            $table->string('type',150);
+            $table->string('type',150)->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +33,11 @@ class CreateListingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('listings');
+        Schema::dropIfExists('comics');
     }
 }
+
+
+
+
+
