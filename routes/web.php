@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','AdminPagesController@dashboard')->name('admin.dashboard');
+Route::get('/','HomeController@home')->name('home');
 
 Route::resource('comics','ComicController');
