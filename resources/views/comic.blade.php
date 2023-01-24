@@ -9,6 +9,11 @@
     <script src="{{ asset('js/app.js') }}"></script>
 </head>
 <body>
-    <h1 class="text-center">Benvenuti nel nostro sito dove troverete la casa dei vostri sogni...</h1>
+    <h1 class="text-center m-5">Entra e cerca tra i migliori fumetti del mondo</h1>
+    <div class="d-flex justify-content-center ">
+        <div class="btn btn-success text-center ">
+            <a href="/comics" class="text-white">Accedi ai fumetti</a>
+        </div>
+    </div>
 </body>
 </html>

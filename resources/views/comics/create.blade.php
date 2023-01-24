@@ -3,7 +3,7 @@
 @section('title', 'Inserisci una nuova casa')
 
 @section('content')
-    <form method="post" action="{{ route('comics.store') }}">
+    <form method="post" action="{{ route('comic.store') }}">
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Titolo</label>
